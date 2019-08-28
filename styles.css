@@ -45,7 +45,7 @@ body {
 }
 .output {
   grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
@@ -62,4 +62,14 @@ body {
 .output .current-operand {
   color: rgba(255, 255, 255);
   font-size: 2.5rem;
+}
+.foot {
+  text-align: center;
+  color: whitesmoke;
+  line-height: 5px;
+  font-weight: 500;
+}
+.foot p i {
+  font-weight: bolder;
+  font-size: 20px;
 }

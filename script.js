@@ -120,16 +120,19 @@ operationButtons.forEach(button =>
   })
 );
 
+// performs computation when equals button is clicked
 equalsButton.addEventListener("click", button => {
   calculator.compute();
   calculator.updateDisplay();
 });
 
+//clears display screen
 allClearButton.addEventListener("click", button => {
   calculator.clear();
   calculator.updateDisplay();
 });
 
+//Deletes numbers from screen
 deleteButton.addEventListener("click", button => {
   calculator.delete();
   calculator.updateDisplay();
