@@ -11,10 +11,14 @@ class Calculator {
     this.operation = undefined;
   }
   delete() {}
-  appendNumber(number) {}
+  appendNumber(number) {
+    this.currentOperand = number;
+  }
   choseOperation(operation) {}
   compute() {}
-  updateDisplay() {}
+  updateDisplay() {
+    this.currentOperandTextElement.innerText = this.currentOperand;
+  }
 }
 
 const numberButtons = document.querySelectorAll("[data-number]");
@@ -32,4 +36,11 @@ const currentOperandTextElement = document.querySelector(
 const calculator = new Calculator(
   previousOperandTextElement,
   currentOperandTextElement
+);
+
+numberButtons.forEach(button =>
+  button.addEventListener("click", () => {
+    calculator.appendNumber(button.innerText);
+    calculator.updateDisplay();
+  })
 );
