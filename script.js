@@ -5,7 +5,11 @@ class Calculator {
     this.clear();
   }
 
-  clear() {}
+  clear() {
+    this.currentOperand = "";
+    this.previousOperand = "";
+    this.operation = undefined;
+  }
   delete() {}
   appendNumber(number) {}
   choseOperation(operation) {}
@@ -23,4 +27,9 @@ const previousOperandTextElement = document.querySelector(
 );
 const currentOperandTextElement = document.querySelector(
   "[data-current-operand]"
+);
+
+const calculator = new Calculator(
+  previousOperandTextElement,
+  currentOperandTextElement
 );
